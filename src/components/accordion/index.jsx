@@ -12,16 +12,16 @@ export default function Accordion() {
   }
 
   function handleMultipleSelection(getCurrentId) {
-    let copyMultiple = [...multiSelection]    // copy multiple selection, we don't want to mess with original array
-    const findIndexOfCurrentId = copyMultiple.indexOf(getCurrentId)
+    let copyMultiple = [...multiSelection]; // copy multiple selection, we don't want to mess with original array
+    const findIndexOfCurrentId = copyMultiple.indexOf(getCurrentId);
 
-    if (findIndexOfCurrentId === -1) { // indexOf = -1 means current is not in the array
-      copyMultiple.push(getCurrentId)
+    if (findIndexOfCurrentId === -1) {
+      // indexOf = -1 means current is not in the array
+      copyMultiple.push(getCurrentId);
+    } else {
+      copyMultiple.splice(findIndexOfCurrentId, 1); // splice is used for delete item from the array, this line means remove with the index (findIndexOfCUrrent is the index), and remove 1 item
     }
-    else {
-      copyMultiple.splice(findIndexOfCurrentId, 1) // splice is used for delete item from the array, this line means remove with the index (findIndexOfCUrrent is the index), and remove 1 item
-    }
-    setMultiSelection(copyMultiple)
+    setMultiSelection(copyMultiple);
   }
 
   return (
@@ -44,11 +44,13 @@ export default function Accordion() {
                 <h3>{dataItem.question}</h3>
                 <span>+</span>
               </div>
-              {enableMultiSelection ? multiSelection.indexOf(dataItem.id) !== -1 && (
-                <div className="content">{dataItem.answer}</div>
-              ) : selected === dataItem.id && (
-                <div className="content">{dataItem.answer}</div>
-              )}
+              {enableMultiSelection
+                ? multiSelection.indexOf(dataItem.id) !== -1 && (
+                    <div className='content'>{dataItem.answer}</div>
+                  )
+                : selected === dataItem.id && (
+                    <div className='content'>{dataItem.answer}</div>
+                  )}
               {/* {selected === dataItem.id || multiSelection.indexOf(dataItem.id) !== -1 ? (
                 <div className='content'>{dataItem.answer}</div>
               ) : null} */}
