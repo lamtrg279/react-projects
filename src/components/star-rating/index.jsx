@@ -7,12 +7,10 @@ export default function StarRating({ noOfStars = 5 }) {
   const [hover, setHover] = useState(0);
 
   function handleClick(getCurrentIndex) {
-    console.log(getCurrentIndex);
     setRating(getCurrentIndex);
   }
 
   function handleMouseEnter(getCurrentIndex) {
-    console.log(getCurrentIndex);
     setHover(getCurrentIndex);
   }
 
@@ -31,7 +29,7 @@ export default function StarRating({ noOfStars = 5 }) {
             onClick={() => handleClick(index)}
             onMouseMove={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave}
-            size={40}
+            size={80}
           />
         );
       })}
