@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordion from "./components/accordion";
+import LightDarkMode from "./components/dark-mode";
 import ImageSlider from "./components/image-slider";
 import LoadMoreData from "./components/load-button";
 import QRCodeGenerator from "./components/qr-code";
@@ -22,6 +23,7 @@ function App() {
       <LoadMoreData />
       <TreeView menus={menus} /> */}
       <QRCodeGenerator />
+      <LightDarkMode />
     </div>
   );
 }
