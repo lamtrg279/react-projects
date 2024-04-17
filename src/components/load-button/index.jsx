@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import "./styles.css";
+import React from "react";
 
 export default function LoadMoreData() {
   const [loading, setLoading] = useState(false);

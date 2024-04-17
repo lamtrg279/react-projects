@@ -1,3 +1,5 @@
+// import React from "react";
+import ScrollIndicator from "components/scroll-indicator";
 import "./App.css";
 import Accordion from "./components/accordion";
 import LightDarkMode from "./components/dark-mode";
@@ -8,11 +10,12 @@ import RandomColor from "./components/random-color";
 import StarRating from "./components/star-rating";
 import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
+import React from "react";
 
 function App() {
   return (
     <div className='App'>
-      {/* <Accordion />
+      <Accordion />
       <RandomColor />
       <StarRating />
       <ImageSlider
@@ -21,9 +24,10 @@ function App() {
         page={"1"}
       />
       <LoadMoreData />
-      <TreeView menus={menus} /> */}
+      <TreeView menus={menus} />
       <QRCodeGenerator />
       <LightDarkMode />
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
     </div>
   );
 }
