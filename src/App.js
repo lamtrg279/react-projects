@@ -13,6 +13,7 @@ import TreeView from "./components/tree-view";
 import menus from "./components/tree-view/data";
 import React from "react";
 import TabTest from "components/custom-tabs/tab-test";
+import ModalTest from "components/custom-modal-popup/modal_test";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       {/* <LightDarkMode /> */}
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
       <TabTest />
+      <ModalTest />
     </div>
   );
 }
